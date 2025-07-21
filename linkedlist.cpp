@@ -9,6 +9,25 @@ struct Node{
 
 Node * head = NULL;
 
+void Traverse () {
+	Node * temp = head;
+	while ( temp!= NULL){
+		cout<<temp -> data<<"-->";
+		temp = temp -> next;
+	}
+	cout<< " NULL";
+}
+
+
+void insertstart(int num){
+	Node * newNode = new Node();
+	newNode ->data = num;
+	newNode ->next = head;
+	
+	head = newNode ;
+	cout<< num << "inserted at start \n";
+}
+
 void insertEnd(int num){
 	Node * newNode = new Node();
 	newNode ->data = num;
@@ -33,9 +52,14 @@ void insertEnd(int num){
 int main(){
 	
 	insertEnd(10);
-	insertEnd(20);
-	insertEnd(30);
-	insertEnd(40);
+	insertEnd(6);
+	insertEnd(6);
+	insertEnd(3);
+	insertstart(3);
+	insertstart(4);
+	Traverse();
+	  
+       
+    return 0;
 }
-
 
