@@ -14,6 +14,26 @@ else {
 }	
 }
 
+int pop(){
+	if(top== -1){
+		cout<<"stack is empty can not remove"<<endl;
+	}
+	else{
+		cout<<stack[top]<<"removed"<<endl;
+		top --;
+	}
+}
+void display (){
+	if (top == -1){
+		cout<< "stack is empty" << endl;
+	}
+	else {
+		for (int i = SIZE-1; i>=0; i--){
+			cout<< stack[i]<<"  ";
+		}
+	}
+}
+
 int main(){
 	push(10);
 	push(20);
@@ -21,4 +41,8 @@ int main(){
 	push(40);
 	push(50);
 	push(60);
+	pop();
+	push(60);
+	display();
+
 }
