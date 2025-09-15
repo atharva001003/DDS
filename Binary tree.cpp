@@ -48,5 +48,7 @@ int main()
     }
     Node*root = nullptr;
     root = insert(root,arr,0,n);
+    cout<<endl;
+    inorder(root);
     
 }
